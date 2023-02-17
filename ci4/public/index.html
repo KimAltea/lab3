@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="js/style.css">
+    <center>
+        <p id="demo"></p>
+    
+        <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d;
+        </script>
+    </center>
+</head>
+<body>
+<div class="wrapper">
+    <div class="left">
+        <img src="img/ALTEA-LOGO.png" alt="user" width="250">
+        <script>
+            window.alert('Hi guys ^_^');
+            
+            </script>
+        <button type="button" onclick="myFunction()">My Nickname!</button>
+
+<p id="nickname"></p>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("nickname").innerHTML = "kimmyyy";
+}
+</script>
+<p id="person"></p>
+<script>
+    const person = {fname:"Kimberly Ann", lname:"Altea", age:18};
+
+let txt = "";
+for (let x in person){
+    txt += person[x] + " ";
+}
+document.getElementById("person").innerHTML = txt;
+</script>
+<p>My Favorite color:</p>
+<p id="Color"></p>
+<script>
+    const Color = ["SkyBlue", "Black", "Cream"];
+
+let color = "";
+for (let x of Color) {
+  color += x + "<br>";
+}
+
+document.getElementById("Color").innerHTML = color;
+</script>
+<script>
+
+</script>
+
+    </div>
+    <div class="right">
+       
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                <div class="data"></div>
+                    <h4>Email</h4>
+                    <p>kealtea@student.apc.edu.ph</p>
+            </div>
+            <div class="data">
+                <h4>School</h4>
+                <p>Asia Pacific College (APC)</p>
+                <h4>Course</h4>
+                <p>Bachelor of Science in Information Technology Specializing Mobile and Internet (BSIT-MI)</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<p id="rem"></p>
+<script>
+    let language ="Don't just exist, live";
+
+    let k = "";
+    for (let x of language){
+        k += x + "<br>";
+    }
+document.getElementById("rem").innerHTML = k;
+</script>
+</body>
+</html>
