@@ -210,6 +210,7 @@ $sql = "SELECT id, Fullname, email, website, comment FROM kealtea_myguests";
 $result = $conn->query($sql);
 
 $conn->close();
+}
 ?>
 
 
