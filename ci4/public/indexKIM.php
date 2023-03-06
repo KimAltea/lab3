@@ -188,9 +188,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 $servername = "192.168.150.213";
 $username = "webprogmi211";
 $password = "j@zzyAngle30";
-$dbname = "webprogmi211"
+$dbname = "webprogmi211";
 
-/$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 
 $name = $_POST['name'];
@@ -210,6 +210,7 @@ $sql = "SELECT id, Fullname, email, website, comment FROM kealtea_myguests";
 $result = $conn->query($sql);
 
 $conn->close();
+}
 ?>
 
 
