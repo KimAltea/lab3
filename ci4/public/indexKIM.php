@@ -192,24 +192,26 @@ $dbname = "webprogmi211"
 
 /$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
-$sql = "SELECT id, firstname, lastname FROM kealtea_myguests";
+$name = $_POST['name'];
+$email = $_POST['email'];
+$website = $_POST['website'];
+$comment = $_POST['comment'];
+
+$sql = "INSERT INTO kealtea_myguests (Fullname, email, website, comment)
+VALUES ('$name','$email', '$website', '$comment')";
+
+if ($conn->multi_query($sql) === TRUE) {
+ echo "New records created successfully";
+} else {
+ echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$sql = "SELECT id, Fullname, email, website, comment FROM kealtea_myguests";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
 $conn->close();
-}
 ?>
+
 
 
 </body>
